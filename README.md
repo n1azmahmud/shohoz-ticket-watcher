@@ -89,7 +89,7 @@ You will use this exact topic name in the script config below.
 
 ### Step 4 — Configure the Script
 
-Open `shohoz_watcher.py` in any text editor (Notepad works fine) and edit the `CONFIG` block near the top:
+Open `script.py` in any text editor (Notepad works fine) and edit the `CONFIG` block near the top:
 
 ```python
 CONFIG = {
@@ -135,7 +135,7 @@ CONFIG = {
 ### Step 5 — Run the Watcher
 
 ```powershell
-python shohoz_watcher.py
+python script.py
 ```
 
 Within a few seconds you should receive a **"Shohoz Watcher started"** notification on your phone — this confirms everything is connected correctly.
@@ -177,13 +177,13 @@ Your phone buzzes: **"TICKET FOUND: Dinajpur to Dhaka"** — tap it to open Shoh
 
 **Option C — Auto-start with Windows:**
 1. Press `Win + R`, type `shell:startup`, press Enter
-2. Create a shortcut to `shohoz_watcher.py` in the folder that opens
+2. Create a shortcut to `script.py` in the folder that opens
 3. The watcher will start automatically every time Windows boots
 
 **Option D — Run on a VPS (most reliable):**
 If your PC might turn off, rent a cheap Linux server (Hetzner ~€4/mo, DigitalOcean ~$5/mo) and run:
 ```bash
-nohup python shohoz_watcher.py > watcher.log 2>&1 &
+nohup python script.py > watcher.log 2>&1 &
 ```
 
 ---
@@ -206,7 +206,7 @@ nohup python shohoz_watcher.py > watcher.log 2>&1 &
 ```
 shohoz-ticket-watcher/
 │
-├── shohoz_watcher.py   ← main script (edit CONFIG at the top)
+├── script.py   ← main script (edit CONFIG at the top)
 └── README.md           ← this file
 ```
 
